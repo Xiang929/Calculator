@@ -324,6 +324,10 @@ void Calculator::calculate(QString expression) {
 								number.push(Beta);
 							}
 							else if (top == '/') {
+								if (Alpha == 0) {
+									ui->display->setText("ERROR");
+									return;
+								}
 								Beta /= Alpha;
 								number.push(Beta);
 							}
